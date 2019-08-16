@@ -1,0 +1,47 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
+telegraf:
+  config: /etc/telegraf/telegraf.conf
+  system_user: root
+  system_group: root
+  pip_pkg: python3-pip
+  toml_module: toml
+  pkg:
+    name: telegraf
+  service:
+    name: telegraf
+  conf:
+    global_tags: {}
+    agent:
+      interval: 10s
+      round_interval: true
+      metric_batch_size: 1000
+      metric_buffer_limit: 10000
+      collection_jitter: 0s
+      flush_interval: 10s
+      flush_jitter: 0s
+      precision: ''
+      hostname: ''
+      omit_hostname: false
+    inputs:
+      cpu:
+        percpu: true
+        totalcpu: true
+        collect_cpu_time: false
+        report_active: false
+      disk:
+        ignore_fs:
+          - tmpfs
+          - devtmpfs
+          - devfs
+          - iso9660
+          - overlay
+          - aufs
+          - squashfs
+      diskio: {}
+      kernel: {}
+      mem: {}
+      processes: {}
+      swap: {}
+      system: {}
