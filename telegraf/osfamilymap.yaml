@@ -10,4 +10,18 @@
 # you will need to provide at least an empty dict in this file, e.g.
 # osfamilymap: {}
 ---
-osfamilymap: {}
+Debian:
+  repo:
+    humanname: telegraf repo
+    name: deb https://repos.influxdata.com/debian {{ grains['oscodename'] }} stable
+    file: /etc/apt/sources.list.d/influxdata.list
+    key_url: https://repos.influxdata.com/influxdb.key
+
+RedHat:
+  repo:
+    humanname: telegraf repo
+    name: telegraf
+    enabled: true
+    gpgcheck: 1
+    baseurl: https://repos.influxdata.com/rhel/$releasever/$basearch/stable
+    gpgkey: https://repos.influxdata.com/influxdb.key
