@@ -5,8 +5,6 @@ telegraf:
   config: /etc/telegraf/telegraf.conf
   system_user: root
   system_group: root
-  pip_pkg: python3-pip
-  toml_module: toml
   pkg:
     name: telegraf
   service:

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import toml
+import pytoml as toml
 
 def dumps(data):
   return toml.dumps(data)

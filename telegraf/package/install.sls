@@ -9,12 +9,6 @@ telegraf/package/install:
   pkg.installed:
     - name: {{ telegraf.pkg.name }}
 
-telegraf/package/pip/install:
-  pkg.installed:
-    - name: {{ telegraf.pip_pkg }}
-
 telegraf/package/toml/install:
-  pip.installed:
-    - name: {{ telegraf.toml_module }}
-    - require:
-      - pkg: {{ telegraf.pip_pkg }}
+  pkg.installed:
+    - name: {{ telegraf.toml_pkg }}
