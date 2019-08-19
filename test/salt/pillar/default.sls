@@ -1,0 +1,4 @@
+telegraf:
+  conf:
+    outputs:
+      discard: {}
