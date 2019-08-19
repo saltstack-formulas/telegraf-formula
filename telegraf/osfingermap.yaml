@@ -20,9 +20,18 @@ Debian-9:
 Debian-8:
   toml_pkg: python-pytoml
 
+Ubuntu-18.04:
+  toml_pkg: python3-pytoml
+
+Ubuntu-16.04:
+  toml_pkg: python-pytoml
+
 CentOS Linux-7:
 {% if grains['pythonversion'][0] == 3 %}
   toml_pkg: python36-pytoml
 {% else %}
   toml_pkg: python-pytoml
 {% endif %}
+
+CentOS Linux-6:
+  toml_pkg: python-pytoml
