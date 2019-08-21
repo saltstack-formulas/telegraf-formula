@@ -47,7 +47,11 @@ Available states
 
 ``telegraf``
 ^^^^^^^^^^^^
-Installs and configures the telegraf package.
+Installs and configures the telegraf package from upstream repository.
+
+``telegraf.repo``
+^^^^^^^^^^^^^^^^^^^^
+Installs the telegraf repository. See `Telegraf doc <https://docs.influxdata.com/telegraf/v1.11/introduction/installation/#installation>`_ for more details.
 
 ``telegraf.package``
 ^^^^^^^^^^^^^^^^^^^^
@@ -56,6 +60,10 @@ Installs the telegraf package.
 ``telegraf.config``
 ^^^^^^^^^^^^^^^^^^^
 This state manages the file ``telegraf.conf`` under ``/etc/telegraf`` (template found in "telegraf/files"). The configuration is populated by values in "telegraf/map.jinja" based on the package's default values (and RedHat, Debian, Suse and Arch family distribution specific values), which can then be overridden by values of the same name in pillar.
+
+``telegraf.service``
+^^^^^^^^^^^^^^^^^^^^
+Manages the startup and running state of the telegraf service.
 
 Testing
 -------
