@@ -10,7 +10,7 @@ telegraf/repo/install:
   pkgrepo.managed:
     {{- format_kwargs(telegraf.repo) }}
 
-{%- if salt['grains.get']('osfinger') == 'Leap-42' %}
+{%- if telegraf.repo_python is defined %}
 telegraf/repo/python-backports/install:
   pkgrepo.managed:
     {{- format_kwargs(telegraf.repo_python) }}

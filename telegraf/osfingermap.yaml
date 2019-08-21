@@ -60,3 +60,9 @@ Leap-42:
 {% else %}
   toml_pkg: python-pytoml
 {% endif %}
+  repo_python:
+    humanname: Python backports
+    name: python-backports
+    enabled: 1
+    gpgautoimport: true
+    baseurl: https://download.opensuse.org/repositories/devel:/languages:/python:/backports/openSUSE_Leap_$releasever
