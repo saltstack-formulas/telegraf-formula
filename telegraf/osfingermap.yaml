@@ -32,3 +32,17 @@ CentOS Linux-7:
 {% else %}
   toml_pkg: python-pytoml
 {% endif %}
+
+Fedora-29:
+{% if grains['pythonversion'][0] == 3 %}
+  toml_pkg: python3-pytoml
+{% else %}
+  toml_pkg: python2-toml
+{% endif %}
+
+Fedora-28:
+{% if grains['pythonversion'][0] == 3 %}
+  toml_pkg: python3-pytoml
+{% else %}
+  toml_pkg: python2-pytoml
+{% endif %}

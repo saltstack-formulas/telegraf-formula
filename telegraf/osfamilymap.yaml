@@ -23,5 +23,5 @@ RedHat:
     name: telegraf
     enabled: true
     gpgcheck: 1
-    baseurl: https://repos.influxdata.com/rhel/$releasever/$basearch/stable
+    baseurl: https://repos.influxdata.com/rhel/$releasever/$basearch/stable/
     gpgkey: https://repos.influxdata.com/influxdb.key
