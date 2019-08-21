@@ -1,3 +1,4 @@
+---
 telegraf:
   conf:
     outputs:
