@@ -32,6 +32,3 @@ CentOS Linux-7:
 {% else %}
   toml_pkg: python-pytoml
 {% endif %}
-
-CentOS Linux-6:
-  toml_pkg: python-pytoml
