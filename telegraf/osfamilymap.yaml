@@ -25,3 +25,17 @@ RedHat:
     gpgcheck: 1
     baseurl: https://repos.influxdata.com/rhel/$releasever/$basearch/stable/
     gpgkey: https://repos.influxdata.com/influxdb.key
+
+Suse:
+  repo:
+    humanname: Go repo
+    name: go
+    enabled: 1
+    gpgautoimport: true
+    baseurl: https://download.opensuse.org/repositories/devel:/languages:/go/openSUSE_Leap_$releasever
+  repo_python:
+    humanname: Python backports
+    name: python-backports
+    enabled: 1
+    gpgautoimport: true
+    baseurl: https://download.opensuse.org/repositories/devel:/languages:/python:/backports/openSUSE_Leap_$releasever
