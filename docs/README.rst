@@ -50,7 +50,7 @@ Available states
 Installs and configures the telegraf package from upstream repository.
 
 ``telegraf.repo``
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 Installs the telegraf repository. See `Telegraf doc <https://docs.influxdata.com/telegraf/v1.11/introduction/installation/#installation>`_ for more details.
 
 ``telegraf.package``
@@ -77,34 +77,35 @@ Requirements
 * Docker
 
 .. code-block:: bash
+
    $ gem install bundler
    $ bundle install
    $ bin/kitchen test [platform]
+
 Where ``[platform]`` is the platform name defined in ``kitchen.yml``,
 e.g. ``debian-9-2019-2-py3``.
 
-
 ``bin/kitchen converge``
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 Creates the docker instance and runs the ``telegraf`` main state, ready for testing.
 
 ``bin/kitchen verify``
-^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 Runs the ``inspec`` tests on the actual instance.
 
 ``bin/kitchen destroy``
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Removes the docker instance.
 
 ``bin/kitchen test``
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 Runs all of the stages above in one go: i.e. ``destroy`` + ``converge`` + ``verify`` + ``destroy``.
 
 ``bin/kitchen login``
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 Gives you SSH access to the instance for manual testing.
