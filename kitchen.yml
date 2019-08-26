@@ -130,7 +130,7 @@ suites:
             '*':
               - telegraf
       pillars_from_files:
-        telegraf.sls: test/salt/default/pillar/telegraf.sls
+        telegraf.sls: test/salt/pillar/telegraf.sls
     verifier:
       inspec_tests:
         - path: test/integration/default
