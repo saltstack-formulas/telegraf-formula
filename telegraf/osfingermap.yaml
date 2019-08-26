@@ -10,6 +10,13 @@
 # you will need to provide at least an empty dict in this file, e.g.
 # osfingermap: {}
 ---
+Debian-10:
+{% if grains['pythonversion'][0] == 3 %}
+  toml_pkg: python3-pytoml
+{% else %}
+  toml_pkg: python-pytoml
+{% endif %}
+
 Debian-9:
 {% if grains['pythonversion'][0] == 3 %}
   toml_pkg: python3-pytoml
