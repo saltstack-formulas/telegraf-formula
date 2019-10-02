@@ -47,3 +47,18 @@
 %}
 
 {%- set telegraf = config %}
+
+{#- Post-processing for specific non-YAML customisations #}
+{%- if grains.pythonversion[0] == 2 %}
+{%-   if grains.os in ['Fedora'] %}
+{%-     do telegraf.update({'toml_pkg': 'python2-toml'}) %}
+{%-   elif grains.os in ['openSUSE', 'SUSE'] %}
+{%-     do telegraf.update({'toml_pkg': 'python2-pytoml'}) %}
+{%-   endif %}
+{%- elif grains.pythonversion[0] == 3 %}
+{%-   if grains.os in ['CentOS'] %}
+{%-     do telegraf.update({'toml_pkg': 'python36-pytoml'}) %}
+{%-   else %}
+{%-     do telegraf.update({'toml_pkg': 'python3-pytoml'}) %}
+{%-   endif %}
+{%- endif %}

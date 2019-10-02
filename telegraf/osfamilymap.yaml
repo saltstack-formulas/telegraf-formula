@@ -32,4 +32,5 @@ Suse:
     name: go
     enabled: 1
     gpgautoimport: true
+    # yamllint disable-line rule:line-length
     baseurl: https://download.opensuse.org/repositories/devel:/languages:/go/openSUSE_Leap_$releasever
