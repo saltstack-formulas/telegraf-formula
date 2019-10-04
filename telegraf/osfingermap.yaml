@@ -10,66 +10,11 @@
 # you will need to provide at least an empty dict in this file, e.g.
 # osfingermap: {}
 ---
-Debian-10:
-{% if grains['pythonversion'][0] == 3 %}
-  toml_pkg: python3-pytoml
-{% else %}
-  toml_pkg: python-pytoml
-{% endif %}
-
-Debian-9:
-{% if grains['pythonversion'][0] == 3 %}
-  toml_pkg: python3-pytoml
-{% else %}
-  toml_pkg: python-pytoml
-{% endif %}
-
-Debian-8:
-  toml_pkg: python-pytoml
-
-Ubuntu-18.04:
-  toml_pkg: python3-pytoml
-
-Ubuntu-16.04:
-  toml_pkg: python-pytoml
-
-CentOS Linux-7:
-{% if grains['pythonversion'][0] == 3 %}
-  toml_pkg: python36-pytoml
-{% else %}
-  toml_pkg: python-pytoml
-{% endif %}
-
-Fedora-29:
-{% if grains['pythonversion'][0] == 3 %}
-  toml_pkg: python3-pytoml
-{% else %}
-  toml_pkg: python2-toml
-{% endif %}
-
-Fedora-28:
-{% if grains['pythonversion'][0] == 3 %}
-  toml_pkg: python3-pytoml
-{% else %}
-  toml_pkg: python2-pytoml
-{% endif %}
-
-Leap-15:
-{% if grains['pythonversion'][0] == 3 %}
-  toml_pkg: python3-pytoml
-{% else %}
-  toml_pkg: python2-pytoml
-{% endif %}
-
 Leap-42:
-{% if grains['pythonversion'][0] == 3 %}
-  toml_pkg: python3-pytoml
-{% else %}
-  toml_pkg: python-pytoml
-{% endif %}
   repo_python:
     humanname: Python backports
     name: python-backports
     enabled: 1
     gpgautoimport: true
+    # yamllint disable-line rule:line-length
     baseurl: https://download.opensuse.org/repositories/devel:/languages:/python:/backports/openSUSE_Leap_$releasever

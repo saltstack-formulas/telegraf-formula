@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 # vim: ft=yaml
 ---
+dist: bionic
 stages:
   - test
-  - commitlint
+  - lint
   - name: release
     if: branch = master AND type != pull_request
 
 sudo: required
 cache: bundler
 language: ruby
-dist: xenial
 
 services:
   - docker
@@ -25,40 +25,49 @@ env:
     # - INSTANCE: default-fedora-30-develop-py3
     # - INSTANCE: default-opensuse-leap-15-develop-py3
     # - INSTANCE: default-amazonlinux-2-develop-py2
+    # - INSTANCE: default-arch-base-latest-develop-py2
     # - INSTANCE: default-debian-9-2019-2-py3
     - INSTANCE: default-ubuntu-1804-2019-2-py3
-    # - INSTANCE: default-centos-7-2019-2-py3
-    # - INSTANCE: default-fedora-30-2019-2-py3
+    - INSTANCE: default-centos-7-2019-2-py3
+    - INSTANCE: default-fedora-30-2019-2-py3
     # - INSTANCE: default-opensuse-leap-15-2019-2-py3
-    - INSTANCE: default-amazonlinux-2-2019-2-py2
+    # - INSTANCE: default-amazonlinux-2-2019-2-py2
+    # - INSTANCE: default-arch-base-latest-2019-2-py2
     # - INSTANCE: default-debian-9-2018-3-py2
     # - INSTANCE: default-ubuntu-1604-2018-3-py2
     # - INSTANCE: default-centos-7-2018-3-py2
-    - INSTANCE: default-fedora-29-2018-3-py2
+    # - INSTANCE: default-fedora-29-2018-3-py2
     - INSTANCE: default-opensuse-leap-15-2018-3-py2
     # - INSTANCE: default-amazonlinux-2-2018-3-py2
+    # - INSTANCE: default-arch-base-latest-2018-3-py2
     # - INSTANCE: default-debian-8-2017-7-py2
-    # - INSTANCE: default-ubuntu-1604-2017-7-py2
-    - INSTANCE: centos6-centos-6-2017-7-py2
+    - INSTANCE: default-ubuntu-1604-2017-7-py2
+    # - INSTANCE: default-centos-6-2017-7-py2
     # - INSTANCE: default-fedora-29-2017-7-py2
     # - INSTANCE: default-opensuse-leap-15-2017-7-py2
     # - INSTANCE: default-amazonlinux-2-2017-7-py2
+    # - INSTANCE: default-arch-base-latest-2017-7-py2
 
 script:
   - bin/kitchen verify ${INSTANCE}
 
 jobs:
   include:
-    # Define the commitlint stage
-    - stage: commitlint
+    # Define the `lint` stage (runs `yamllint` and `commitlint`)
+    - stage: lint
       language: node_js
       node_js: lts/*
       before_install: skip
       script:
+        # Install and run `yamllint`
+        # Need at least `v1.17.0` for the `yaml-files` setting
+        - pip install --user yamllint>=1.17.0
+        - yamllint -s .
+        # Install and run `commitlint`
         - npm install @commitlint/config-conventional -D
         - npm install @commitlint/travis-cli -D
         - commitlint-travis
-    # Define the release stage that runs semantic-release
+    # Define the release stage that runs `semantic-release`
     - stage: release
       language: node_js
       node_js: lts/*
