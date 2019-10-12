@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 control 'Telegraf package' do
   title 'should be installed'
 
