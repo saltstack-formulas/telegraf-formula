@@ -3,4 +3,4 @@
 # Your changes will be overwritten.
 ########################################################################
 
-{{ salt['toml_lang.dumps'](telegraf) }}
+{{ salt['slsutil.serialize']('toml', telegraf) }}

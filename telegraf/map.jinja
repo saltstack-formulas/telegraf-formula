@@ -57,9 +57,7 @@
 {%-     do telegraf.update({'toml_pkg': 'python2-pytoml'}) %}
 {%-   endif %}
 {%- elif grains.pythonversion[0] == 3 %}
-{%-   if osfinger in ['CentOS Linux-8'] %}
-{%-     do telegraf.update({'toml_pkg': 'python3-toml'}) %}
-{%-   elif osfinger in ['CentOS Linux-7'] %}
+{%-   if osfinger in ['CentOS Linux-7'] %}
 {%-     do telegraf.update({'toml_pkg': 'python36-pytoml'}) %}
 {%-   else %}
 {%-     do telegraf.update({'toml_pkg': 'python3-pytoml'}) %}
