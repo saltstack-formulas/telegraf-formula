@@ -1,5 +1,55 @@
 # Changelog
 
+# [1.0.0](https://github.com/saltstack-formulas/telegraf-formula/compare/v0.3.1...v1.0.0) (2020-03-11)
+
+
+### Bug Fixes
+
+* **libtofs:** “files_switch” mess up the variable exported by “map.jinja” [skip ci] ([9ea2bda](https://github.com/saltstack-formulas/telegraf-formula/commit/9ea2bda3434340169e67fe396bf08e727d498ca8))
+* **pytoml:** add package name for `centos-8` ([6428501](https://github.com/saltstack-formulas/telegraf-formula/commit/6428501c7c601f10255c8af390a77fe507878859))
+* **pytoml:** the Centos 8 distribution should install python3-pytoml ([2eaba15](https://github.com/saltstack-formulas/telegraf-formula/commit/2eaba15c209dab33ddefebf1f77a773b76906c23))
+* **release.config.js:** use full commit hash in commit link [skip ci] ([5dbfe8e](https://github.com/saltstack-formulas/telegraf-formula/commit/5dbfe8ef55f7b6d064568060d481d859cce3e676))
+
+
+### Continuous Integration
+
+* **gemfile:** restrict `train` gem version until upstream fix [skip ci] ([81b6817](https://github.com/saltstack-formulas/telegraf-formula/commit/81b6817a21a2adbfc8b7b77e7ee8aeb5d1e10a72))
+* **kitchen:** avoid using bootstrap for `master` instances [skip ci] ([8dbf7c2](https://github.com/saltstack-formulas/telegraf-formula/commit/8dbf7c223d661f6a0768b2483c66d671ed2bdb28))
+* **kitchen:** use `debian-10-master-py3` instead of `develop` [skip ci] ([136a01c](https://github.com/saltstack-formulas/telegraf-formula/commit/136a01c2b31807c7bf785061576754437b3efd3e))
+* **kitchen:** use `develop` image until `master` is ready (`amazonlinux`) [skip ci] ([0883324](https://github.com/saltstack-formulas/telegraf-formula/commit/0883324134f243e43979416934531472bc266d50))
+* **kitchen+travis:** upgrade matrix after `2019.2.2` release [skip ci] ([cbca3ab](https://github.com/saltstack-formulas/telegraf-formula/commit/cbca3abcbc6641577877ed5ae4dd7b686661e1cb))
+* **travis:** adjust to new working matrix ([db7098e](https://github.com/saltstack-formulas/telegraf-formula/commit/db7098ec195033b6e36e0826f3eadeb8181d15aa))
+* **travis:** apply changes from build config validation [skip ci] ([ff4854b](https://github.com/saltstack-formulas/telegraf-formula/commit/ff4854b3280ae79123a8e5b1efd12e5bcd673907))
+* **travis:** drop 2017.7 platform test ([266f67c](https://github.com/saltstack-formulas/telegraf-formula/commit/266f67c8a07749951d4793c601a22632c3c45852))
+* **travis:** opt-in to `dpl v2` to complete build config validation [skip ci] ([11a0d28](https://github.com/saltstack-formulas/telegraf-formula/commit/11a0d284382eca935246035101735fbc7b8faadc))
+* **travis:** quote pathspecs used with `git ls-files` [skip ci] ([f95e4f0](https://github.com/saltstack-formulas/telegraf-formula/commit/f95e4f0ea5dbcc22081ec46f64e9be4190f43376))
+* **travis:** run `shellcheck` during lint job [skip ci] ([380cce1](https://github.com/saltstack-formulas/telegraf-formula/commit/380cce180569da5bdcd3a75338637826ed92f99f))
+* **travis:** update `salt-lint` config for `v0.0.10` [skip ci] ([50e0774](https://github.com/saltstack-formulas/telegraf-formula/commit/50e0774c71366fb307e294a204bfa4c198f83d57))
+* **travis:** use `major.minor` for `semantic-release` version [skip ci] ([7794ab7](https://github.com/saltstack-formulas/telegraf-formula/commit/7794ab716aacd62c05af888a39be45eaee14e5b4))
+* **travis:** use build config validation (beta) [skip ci] ([8baf3ee](https://github.com/saltstack-formulas/telegraf-formula/commit/8baf3eed19465abf27de19c468efc3475010bd76))
+
+
+### Documentation
+
+* **contributing:** remove to use org-level file instead [skip ci] ([6fc42dc](https://github.com/saltstack-formulas/telegraf-formula/commit/6fc42dcfb371d9132b2fab41ded51768abe53dc1))
+* **readme:** update link to `CONTRIBUTING` [skip ci] ([fdc6a3e](https://github.com/saltstack-formulas/telegraf-formula/commit/fdc6a3ea82d07d89b630c14a0c48e02858437e82))
+
+
+### Features
+
+* **config:** salt has a module to serialize to TOML ([013fefb](https://github.com/saltstack-formulas/telegraf-formula/commit/013fefbb05785c0152fba4dc2a0f9efca74573f1))
+
+
+### Performance Improvements
+
+* **travis:** improve `salt-lint` invocation [skip ci] ([b50654f](https://github.com/saltstack-formulas/telegraf-formula/commit/b50654fd41ba680642855a0d091f5a85d46db9ae))
+
+
+### BREAKING CHANGES
+
+* **config:** `salt['slsutil.serialize']` was introduced in `2018.3`
+* **config:** `toml` serializer was introduced in `2018.3`
+
 ## [0.3.1](https://github.com/saltstack-formulas/telegraf-formula/compare/v0.3.0...v0.3.1) (2019-10-12)
 
 
