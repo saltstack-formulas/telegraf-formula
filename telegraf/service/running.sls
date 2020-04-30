@@ -13,5 +13,5 @@ telegraf/service/running:
   service.running:
     - name: {{ telegraf.service.name }}
     - enable: True
-    - require:
+    - watch:
       - sls: {{ sls_config_file }}
