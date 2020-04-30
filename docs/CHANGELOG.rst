@@ -2,6 +2,21 @@
 Changelog
 =========
 
+`1.0.1 <https://github.com/saltstack-formulas/telegraf-formula/compare/v1.0.0...v1.0.1>`_ (2020-04-30)
+----------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **running.sls:** use ``watch`` not ``require`` to ensure service restart (\ `861e17e <https://github.com/saltstack-formulas/telegraf-formula/commit/861e17efeae93d6829906f884bfabba11bf374f5>`_\ ), closes `#5 <https://github.com/saltstack-formulas/telegraf-formula/issues/5>`_
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* **gemfile.lock:** add to repo with updated ``Gemfile`` [skip ci] (\ `ecf0fff <https://github.com/saltstack-formulas/telegraf-formula/commit/ecf0fff0bd24c370c590eed2f115949a854bd00d>`_\ )
+
 `1.0.0 <https://github.com/saltstack-formulas/telegraf-formula/compare/v0.3.1...v1.0.0>`_ (2020-03-11)
 ----------------------------------------------------------------------------------------------------------
 
