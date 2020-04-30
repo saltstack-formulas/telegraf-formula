@@ -15,3 +15,6 @@ telegraf/service/running:
     - enable: True
     - require:
       - sls: {{ sls_config_file }}
+    - reload: True
+    - watch:
+      - file: {{ sls_config_file }}
