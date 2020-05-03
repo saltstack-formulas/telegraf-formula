@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.0.2](https://github.com/saltstack-formulas/telegraf-formula/compare/v1.0.1...v1.0.2) (2020-05-03)
+
+
+### Bug Fixes
+
+* **package/install:** ensure `toml` works for Sodium (3001) ([6c3a886](https://github.com/saltstack-formulas/telegraf-formula/commit/6c3a886f7a4672c158ae47b5502f8750389bb68c))
+
+
+### Continuous Integration
+
+* **kitchen+travis:** remove `master-py2-arch-base-latest` [skip ci] ([d018eb2](https://github.com/saltstack-formulas/telegraf-formula/commit/d018eb21ca1ee858cc644e33449937b011ba5b28))
+* **travis:** avoid `master` instances due to `toml` issues [skip ci] ([5d33d2b](https://github.com/saltstack-formulas/telegraf-formula/commit/5d33d2b16b6ff0338fbb211972bccdc17922ce46))
+
+
+### Reverts
+
+* **travis:** avoid `master` instances due to `toml` issues ([4b6849b](https://github.com/saltstack-formulas/telegraf-formula/commit/4b6849bb68f6992e03b75f8822e36394f0d7da39))
+
 ## [1.0.1](https://github.com/saltstack-formulas/telegraf-formula/compare/v1.0.0...v1.0.1) (2020-04-30)
 
 
