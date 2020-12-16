@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.0.3](https://github.com/saltstack-formulas/telegraf-formula/compare/v1.0.2...v1.0.3) (2020-12-16)
+
+
+### Continuous Integration
+
+* **gitlab-ci:** use GitLab CI as Travis CI replacement ([cfced53](https://github.com/saltstack-formulas/telegraf-formula/commit/cfced539050a019a1f1980569005f5dd088960ff))
+* **kitchen:** use `saltimages` Docker Hub where available [skip ci] ([8aa42a8](https://github.com/saltstack-formulas/telegraf-formula/commit/8aa42a82547bb6461bffd251842dbe7282aaec05))
+* **pre-commit:** add to formula [skip ci] ([4cedc21](https://github.com/saltstack-formulas/telegraf-formula/commit/4cedc21392b50282093d66c35e111b48ba0efcb5))
+* **pre-commit:** enable/disable `rstcheck` as relevant [skip ci] ([4e0b31b](https://github.com/saltstack-formulas/telegraf-formula/commit/4e0b31beaf004210b3d91ea60dc8bd2d81240a99))
+* **pre-commit:** finalise `rstcheck` configuration [skip ci] ([0602d2a](https://github.com/saltstack-formulas/telegraf-formula/commit/0602d2ad6ac66ef247cf89600ed8e165792a8cda))
+* **travis:** add notifications => zulip [skip ci] ([8c849fc](https://github.com/saltstack-formulas/telegraf-formula/commit/8c849fc71184c4d90fd5e5ea2113708d90ad2586))
+* **workflows/commitlint:** add to repo [skip ci] ([beb229c](https://github.com/saltstack-formulas/telegraf-formula/commit/beb229c6f75a96e99ade87b80c31edf372b13361))
+
+
+### Styles
+
+* **libtofs.jinja:** use Black-inspired Jinja formatting [skip ci] ([64d4d2c](https://github.com/saltstack-formulas/telegraf-formula/commit/64d4d2c5de83362238d49fde5a9e6b4c4c4ed363))
+
 ## [1.0.2](https://github.com/saltstack-formulas/telegraf-formula/compare/v1.0.1...v1.0.2) (2020-05-03)
 
 
