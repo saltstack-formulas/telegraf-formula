@@ -12,4 +12,7 @@
 ---
 Fedora:
   repo:
+    baseurl: https://repos.influxdata.com/rhel/8/$basearch/stable/
+Amazon:
+  repo:
     baseurl: https://repos.influxdata.com/rhel/7/$basearch/stable/
