@@ -312,6 +312,7 @@ suites:
       state_top:
         base:
           '*':
+            - telegraf._mapdata
             - telegraf
       pillars:
         top.sls:
